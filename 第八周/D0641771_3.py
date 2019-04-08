@@ -6,8 +6,14 @@ while(1):
         break
     elif chose == 2:
         translate = input("請輸入中文單字:")
-        
-        print("222")
+        if translate in myDic.values():
+            print(list (myDic.keys()) [list (myDic.values()).index (translate)])
+        else:
+            print("抱歉 字典沒有這個字")
     elif chose == 1:
         translate = input("請輸入英文單字:")
-        print("1111")
+        if translate in list(myDic.keys()):
+            print(myDic[translate])
+        else:
+            print("抱歉 字典沒有這個字")
+
